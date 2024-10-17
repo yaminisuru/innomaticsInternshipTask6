@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Application</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="todos-bg-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="todos-heading">Todos</h1>
+          <h2 class="create-task-heading">Create <span class="create-task-heading-subpart">Task</span></h2>
+
+          <!-- Task Input -->
+          <input type="text" id="todoUserInput" class="todo-user-input" placeholder="Task description" />
+          <input type="date" id="dueDateInput" class="todo-user-input" placeholder="Due Date" />
+          <select id="priorityInput" class="todo-user-input">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <input type="text" id="categoryInput" class="todo-user-input" placeholder="Category" />
+          <button class="button" id="addTodoButton">Add</button>
+
+          <!-- Filter Options -->
+          <div class="filters">
+            <button class="button filter-btn" data-filter="all">All</button>
+            <button class="button filter-btn" data-filter="completed">Completed</button>
+            <button class="button filter-btn" data-filter="pending">Pending</button>
+          </div>
+
+          <!-- Tasks List -->
+          <h2 class="todo-items-heading">My <span class="todo-items-heading-subpart">Tasks</span></h2>
+          <ul class="todo-items-container" id="todoItemsContainer"></ul>
+
+          <!-- Save Button -->
+          <button class="button" id="saveTodoButton">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
